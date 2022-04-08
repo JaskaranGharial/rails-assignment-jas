@@ -19,16 +19,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <%= link_to "Albums", albums_path, class: 'nav-link',style: 'color:#FFFFFF; text-decoration:none' %>
-        </li>
         <li> <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" style="background-color:#212529; border-color: #212529;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-Alias  </button>
+  <button class="btn btn-secondary dropdown-toggle" style="background-color:#212529; border-color: #212529;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Alias</button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><%= link_to "Edit your profile", edit_user_registration_path , class: "dropdown-item",style: 'color:#000; text-decoration:none; font-size:1rem; justify-content: center'%></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><%= link_to "Sign Out", destroy_user_session_path, class: 'dropdown-item',style: 'color:#000; text-decoration:none; font-size:1rem; justify-content: center' %></li>
+    <li><hr class="dropdown-divider"></li>
+    <%= link_to "Sign Out", destroy_user_session_path, class: 'dropdown-item',style: 'color:#000; text-decoration:none; font-size:1rem; justify-content: center' %></li>
   </ul>
 </div>
       </ul>
