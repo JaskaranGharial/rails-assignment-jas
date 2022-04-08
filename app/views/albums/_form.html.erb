@@ -1,0 +1,36 @@
+<div class = "d-flex justify-content-center">
+<%= form_with model: @album do |form| %>
+  <div>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% if @album.errors.any? %>
+      <% @album.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :decription %><br>
+    <%= form.text_field :decription %>
+    <% if @album.errors.any? %>
+      <% @album.errors.full_messages_for(:decription).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Choose_Photos_For_Album %><br>
+    <%= form.file_field :album_photos, multiple: true %>
+  </div>
+<br>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+<br>
+<%= link_to "Back", albums_path, style: "display: block;width: 115px;height: 46px;background: #212529;padding: 10px;text-align: center;border-radius: 5px;color: white;font-weight: bold; text-decoration: none; margin: auto;line-height: 25px;" %>
+</div>
+</div>

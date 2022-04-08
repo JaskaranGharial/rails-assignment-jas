@@ -1,0 +1,32 @@
+<h1>Rails Assignment</h1>
+<ul>
+    <li>Create a simple rails application.</li>
+    <li>Use devise gem for authentication.</li>
+    <li> User can have many albums(name and description) and album can have many photos.</li>
+    <li>There will be album new/edit form. Ability to delete the album. Ability to delete associated photos individually and along with on delete of a album.</li>
+    <li>On the album new/edit form, user should be able to upload multiple photos. Should be done using accepts_nested_attributes for multimodel form.</li>
+    <li>Photos can also have multiple tags(comma separated) (Don't use any tagging plugin/gem). Album and associated photos with tags should be created simultaneously as explained in the previous point as well.</li>
+    <li>Include necessary Unit and Functional tests.</li>
+    <li>Deploy the app to heroku(https://www.heroku.com) using github.</li>
+</ul>
+<br>
+<p>Note: Don't use Scaffolding anywhere.</p>
+
+<hr style="border: 4px solid black;">
+
+<% if current_user %>
+        <p>Hello, <%= current_user.email %>!!!</p>
+        <p>View Your Albums: <a href="/albums">Albums</a></p>
+<% else %>
+    <p>You are not signed in!!!</p>
+    <p>To create a new account: </p>
+    <ul>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+    </ul>
+    <p>Or, if you are connected with us: </p>
+    <ul>    
+        <li>
+            <p>Please <%= link_to "Login", new_user_session_path %> with your credentials</p>
+        </li>
+    </ul>
+<% end %>

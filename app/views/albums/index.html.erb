@@ -1,0 +1,10 @@
+<h1>Albums</h1>
+<h4>Your currently generated Albums: </h4>
+<%@album.each do |album|%>
+    <ul>
+        <li>
+            <%= link_to album.title, album, style: "text-decoration:none; color: #000;" %>
+        </li>
+    </ul>
+<% end %>
+<%= link_to "New Album", new_album_path, style: "display: block;width: 115px;height: 46px;background: #212529;padding: 10px;text-align: center;border-radius: 5px;color: white;font-weight: bold; text-decoration: none; margin-left: 10px;line-height: 25px;" %>
