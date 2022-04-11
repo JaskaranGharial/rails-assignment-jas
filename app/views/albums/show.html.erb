@@ -21,7 +21,7 @@
 <div class="container" style="max-width: 1700px;">
 <% @album.album_photos.order("created_at DESC").each do |album_photos| %>
 <div style="margin: 5px;border: 1px solid #ccc;float: left;width: 195px;">
-<%= link_to image_tag(album_photos.variant(resize_to_fill: [195, 195]), style: "width: 100%;height: auto;", alt: album_photos.filename.to_s).processed, album_photos, target: "_blank"%>
+<%= link_to image_tag(album_photos.variant(resize_to_fill: [195, 195]), style: "width: 100%;height: auto;", alt: album_photos.filename.to_s), album_photos, target: "_blank"%>
 
 <div style="padding: 8px;text-align: center;font-size: 0.7em">
 <%= link_to 'Delete', delete_album_photos_album_path(album_photos), method: :delete, data: { confirm: 'Are you sure?' }, style: "text-decoration:none; color: #000;" %>
