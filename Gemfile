@@ -71,7 +71,10 @@ gem 'image_processing', '~> 1.2'
 
 gem 'devise', '~> 4.8', '>= 4.8.1'
 
+gem 'doorkeeper'
+
 gem 'google-api-client'
+
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
